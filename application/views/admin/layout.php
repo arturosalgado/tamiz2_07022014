@@ -214,7 +214,31 @@
 					<li>
 						<a href="calendar.html"><i class="fa fa-lg fa-fw fa-calendar"></i> <span class="menu-item-parent">Calendario</span></a>
 					</li>
-					
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Reportes</span></a>
+						<ul>
+							<li>
+                                                            <a href="<?php echo site_url("/reports/generate/state") ?>">Por Estado</a>
+							</li>
+							<li>
+								<a href="<?php echo site_url("/reports/generate/jurisdiction/") ?>">Por Jurisdiccion</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Catalogos</span></a>
+						<ul>
+							<li>
+                                                            <a href="<?php echo site_url("/catalogs/process/states") ?>">Estados</a>
+							</li>
+							<li>
+							    <a href="<?php echo site_url("/catalogs/process/jusrisdiction") ?>">Jurisdicciones</a>
+							</li>
+                                                        <li>
+							    <a href="<?php echo site_url("/catalogs/process/units") ?>">Unidades</a>
+							</li>
+						</ul>
+					</li>
 					
 					
 					

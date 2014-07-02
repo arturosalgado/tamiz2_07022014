@@ -14,5 +14,8 @@ class home extends MY_Controller {
         return $this->load->view("admin/home_view",$this->data,true);
         
     }
+    function getControllerName() {
+        return "home";
+    }
     
 }

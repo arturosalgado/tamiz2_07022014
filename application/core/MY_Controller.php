@@ -12,6 +12,12 @@ class MY_Controller extends CI_Controller
             
     function __construct() {
         parent::__construct();
+        $c = $this->getControllerName();
+        
+       
+        if ($c!='log')
+        $this->checkSession();
+        
     }
     
     
@@ -33,6 +39,30 @@ class MY_Controller extends CI_Controller
         
     }
     
-   
+    function checkSession()
+    {
+       
+        
+        $this->load->library('phpsession');
+        $user = $this->phpsession->get('user');
+        
+        
+        if (!$user )
+        {
+            
+             redirect("log/in");
+
+            
+        }
+       
+        
+    }
+    
+    
+    function getControllerName()
+    {
+    
+    }
+    
     
 }

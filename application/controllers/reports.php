@@ -1,6 +1,6 @@
 <?php
 
-class tamiz extends MY_Controller{
+class reports extends MY_Controller{
     
     
     
@@ -11,29 +11,29 @@ class tamiz extends MY_Controller{
     
     function Content()
     {
-       if ($this->view=='form') {
-       //echo " id ".$this->id;
-       $t = new TamizModel($this->id);    
-       $t->where('id',  $this->id)->get(1);
-      
-       //echo $t->nombre;
-      // print_r($record);
-       
-       $this->data['record']=$t;    
-       return  $this->load->view("admin/tamiz/form",  $this->data,true);     
-       }
-       else
-       {    
-           $t = new TamizModel();
-           $t->get();
-           $all = $t->all;
-           $this->data['all']=$all;
-           return  $this->load->view("admin/tamiz/list_view",  $this->data,true);  
         
-       } 
+        switch($this->field)   
+        {
+            
+            case 'state';
+            return $this->report_state();
+            
+        }
+       
+        
+        
         
     }
     
+    function report_state()
+    {
+        $t = new TamizModel();
+        $t->get();
+        $all = $t->all;
+        $this->data['all']=$all;
+        return  $this->load->view("admin/reports/state",  $this->data,true);  
+        
+    }
     
     function form($id = null)
     {
@@ -73,7 +73,15 @@ class tamiz extends MY_Controller{
     }
     
     function getControllerName() {
-        return 'tamiz';
+        return 'reports';
     }
    
+    function generate($field)
+    {
+        $this->field = $field;
+        $this->index();
+        
+    }
+    
+    
 }
