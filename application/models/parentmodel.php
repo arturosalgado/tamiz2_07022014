@@ -9,5 +9,34 @@ class ParentModel extends DataMapper{
     }
     
     
+    function editLink()
+    {
+        return "#";
+    }
+    
+    function newLink()
+    {
+        
+        return "#";
+        
+    }
+    function formAction()
+    {
+        
+        return '';
+        
+    }
+    
+    function returnPage()
+    {
+        return site_url("catalogs/process/states/");
+        
+    }
+    
+    function viewPath()
+    {
+        return "";
+        
+    }
     
 }

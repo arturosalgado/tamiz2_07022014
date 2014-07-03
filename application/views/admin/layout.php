@@ -230,9 +230,13 @@
 						<ul>
 							<li>
                                                             <a href="<?php echo site_url("/catalogs/process/states") ?>">Estados</a>
+                                                            
+                                                            
 							</li>
+                                                        
+                                                        
 							<li>
-							    <a href="<?php echo site_url("/catalogs/process/jusrisdiction") ?>">Jurisdicciones</a>
+							    <a href="<?php echo site_url("/catalogs/process/jurisdiction") ?>">Jurisdicciones</a>
 							</li>
                                                         <li>
 							    <a href="<?php echo site_url("/catalogs/process/units") ?>">Unidades</a>

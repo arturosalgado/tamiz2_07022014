@@ -1,10 +1,10 @@
 <?php
 
 
-class EstadoModel extends ParentModel
+class JurisdictionModel extends ParentModel
 {
     
-    public  $table = 'estados';
+    public  $table = 'jurisdictions';
             
     function __construct($id = NULL) {
         parent::__construct($id);
@@ -93,18 +93,25 @@ class EstadoModel extends ParentModel
     }
     
     function formAction() {
-        return site_url("catalogs/update/estadomodel/{$this->id}");
+        return site_url("catalogs/update/jurisdictionmodel/{$this->id}");
     }
     
     function editLink(){
         
-        return site_url("catalogs/edit/estado/{$this->id}");
+        return site_url("catalogs/edit/jurisdictionmodel/{$this->id}");
     }
     function returnPage()
     {
-        return site_url("catalogs/process/states/");
+        return site_url("catalogs/process/jurisdiction/");
         
     }
-    
-    
+    function newLink() {
+        return site_url("catalogs/edit/jurisdictionmodel/");
+    }
+    function viewPath()
+    {
+        
+        return 'admin/catalogs/jurisdictions/list';
+        
+    }
 }

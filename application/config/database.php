@@ -54,6 +54,11 @@ if ($_SERVER['SERVER_NAME']=='localhost')
     $active_group = 'default';
     
 }
+else if ($_SERVER['SERVER_NAME']=='184.154.167.98')
+{
+    $active_group = 'sintesys';
+}
+    
 else
     $active_group = 'dev';
 
@@ -73,6 +78,21 @@ $db['dev']['swap_pre'] = '';
 $db['dev']['autoinit'] = TRUE;
 $db['dev']['stricton'] = FALSE;
 
+$db['sintesys']['hostname'] = 'localhost';
+$db['sintesys']['username'] = 'sintesys_tamiz';
+$db['sintesys']['password'] = 'tamiz20113926';
+$db['sintesys']['database'] = 'sintesys_tamiz';
+$db['sintesys']['dbdriver'] = 'mysqli';
+$db['sintesys']['dbprefix'] = '';
+$db['sintesys']['pconnect'] = TRUE;
+$db['sintesys']['db_debug'] = TRUE;
+$db['sintesys']['cache_on'] = FALSE;
+$db['sintesys']['cachedir'] = '';
+$db['sintesys']['char_set'] = 'utf8';
+$db['sintesys']['dbcollat'] = 'utf8_general_ci';
+$db['sintesys']['swap_pre'] = '';
+$db['sintesys']['autoinit'] = TRUE;
+$db['sintesys']['stricton'] = FALSE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';

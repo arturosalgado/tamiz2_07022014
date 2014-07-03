@@ -1,10 +1,10 @@
 <?php
 
 
-class EstadoModel extends ParentModel
+class UnitModel extends ParentModel
 {
     
-    public  $table = 'estados';
+    public  $table = 'units';
             
     function __construct($id = NULL) {
         parent::__construct($id);
@@ -105,6 +105,10 @@ class EstadoModel extends ParentModel
         return site_url("catalogs/process/states/");
         
     }
-    
+    function viewPath()
+    {
+        return 'admin/catalogs/units/list';
+        
+    }
     
 }
