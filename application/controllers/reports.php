@@ -83,5 +83,13 @@ class reports extends MY_Controller{
         
     }
     
-    
+    function test()
+    {
+            
+        $this->load->library('export');
+        $this->load->model('TamizModel');
+        $sql = $this->TamizModel->myqueryfunction();
+        $this->export->to_excel($sql, 'nameForFile'); 
+        
+    }
 }

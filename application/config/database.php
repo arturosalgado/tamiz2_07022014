@@ -49,6 +49,7 @@ $active_group = 'default';
 $active_record = TRUE;
 
 //echo $_SERVER['SERVER_NAME'];
+//--
 if ($_SERVER['SERVER_NAME']=='localhost')
 {
     $active_group = 'default';

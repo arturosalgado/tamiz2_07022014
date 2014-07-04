@@ -166,4 +166,31 @@ class TamizModel extends ParentModel
         
     }
     
+    
+    function ExcelHeaders()
+    {
+        
+        $a[]="Nombre";
+        $a[]="Edad";
+        $a[]="Estado";
+        $a[]="Nombre";
+        return $a;
+        
+    }
+    
+    function myqueryfunction()
+    {
+        
+        $q = "Select * from tamiz";
+        $r = $this->db->query($q);
+        
+        
+        //echo "<pre>";
+        //var_dump($r);
+        //echo "</pre>";
+        
+        
+        return $r;
+        
+    }
 }
