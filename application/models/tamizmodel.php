@@ -167,7 +167,7 @@ class TamizModel extends ParentModel
     }
     
     
-    function ExcelHeaders()
+    function getExcelHeaders()
     {
         
         $a[]="Nombre";

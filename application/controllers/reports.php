@@ -88,7 +88,9 @@ class reports extends MY_Controller{
             
         $this->load->library('export');
         $this->load->model('TamizModel');
+        
         $sql = $this->TamizModel->myqueryfunction();
+        $this->export->setHeaders($this->TamizModel->getExcelHeaders());
         $this->export->to_excel($sql, 'nameForFile'); 
         
     }

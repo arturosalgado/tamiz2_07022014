@@ -389,6 +389,8 @@
 		<!-- MAIN APP JS FILE -->
 		<script src="<?php echo base_url('themes/admin') ?>/js/app.js"></script>
 		
+                <script src="<?php echo base_url('themes/admin') ?>/js/scripts.js"></script>
+                
 		<!-- PAGE RELATED PLUGIN(S) -->
 		
 		<!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip -->
